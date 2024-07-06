@@ -1,0 +1,67 @@
+These queries cover a range of system metrics(common OIDs). Make sure to replace `10.0.0.1` with the IP address of the host you are querying.
+
+1. **System Uptime**:
+   This OID returns the time (in hundredths of a second) since the network management portion of the system was last re-initialized.
+   ```sh
+   snmpget -v2c -c public 10.0.0.1 1.3.6.1.2.1.1.3.0
+   ```
+
+2. **System Description**:
+   This OID provides a textual description of the entity.
+   ```sh
+   snmpget -v2c -c public 10.0.0.1 1.3.6.1.2.1.1.1.0
+   ```
+
+3. **System Name**:
+   This OID returns the name of the device.
+   ```sh
+   snmpget -v2c -c public 10.0.0.1 1.3.6.1.2.1.1.5.0
+   ```
+
+4. **Interface Statistics**:
+   - **List all interfaces**:
+     ```sh
+     snmpwalk -v2c -c public 10.0.0.1 1.3.6.1.2.1.2.2.1.2
+     ```
+   - **Interface Inbound Octets** (for interface 1):
+     ```sh
+     snmpget -v2c -c public 10.0.0.1 1.3.6.1.2.1.2.2.1.10.1
+     ```
+   - **Interface Outbound Octets** (for interface 1):
+     ```sh
+     snmpget -v2c -c public 10.0.0.1 1.3.6.1.2.1.2.2.1.16.1
+     ```
+   - **Interface Operational Status** (for interface 1):
+     ```sh
+     snmpget -v2c -c public 10.0.0.1 1.3.6.1.2.1.2.2.1.8.1
+     ```
+
+5. **CPU Load** (if supported):
+   ```sh
+   snmpwalk -v2c -c public 10.0.0.1 1.3.6.1.4.1.2021.10.1.3
+   ```
+
+6. **Memory Usage** (if supported):
+   - **Total Swap Memory**:
+     ```sh
+     snmpget -v2c -c public 10.0.0.1 1.3.6.1.4.1.2021.4.3.0
+     ```
+   - **Available Swap Memory**:
+     ```sh
+     snmpget -v2c -c public 10.0.0.1 1.3.6.1.4.1.2021.4.4.0
+     ```
+   - **Total RAM**:
+     ```sh
+     snmpget -v2c -c public 10.0.0.1 1.3.6.1.4.1.2021.4.5.0
+     ```
+   - **Available RAM**:
+     ```sh
+     snmpget -v2c -c public 10.0.0.1 1.3.6.1.4.1.2021.4.6.0
+     ```
+
+7. **Disk Usage** (if supported):
+   ```sh
+   snmpwalk -v2c -c public 10.0.0.1 1.3.6.1.4.1.2021.9.1
+   ```
+
+

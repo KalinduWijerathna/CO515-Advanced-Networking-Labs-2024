@@ -1,0 +1,708 @@
+###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #
+#                                                             #
+# The PWD team.                                               #
+###############################################################
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr ($hostname -i)
+bash: syntax error near unexpected token `('
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr $(hostname -i)
+Swarm initialized: current node (z0gb723o6ikqwkg3txx0uh7o8) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3s7eqhe224ubuynwz9iyoy3a5y1wjjjm6886kv5maxmpxiwt8m-9aaultjycjqy8osg5cr8qxnfk 192.168.0.28:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+[node1] (local) root@192.168.0.28 ~
+$ docker nodes ls
+docker: 'nodes' is not a docker command.
+See 'docker --help'
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+fzruslypwch501s7uyzmpztrz     node2      Ready     Active                          24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d ovrlay overnet
+Error response from daemon: plugin "ovrlay" not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d overlay overnet
+kq2r76w6h3ilm1bn5ydq91006
+[node1] (local) root@192.168.0.28 ~
+$ docke###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #
+#                                                             #
+# The PWD team.                                               #
+###############################################################
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr ($hostname -i)
+bash: syntax error near unexpected token `('
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr $(hostname -i)
+Swarm initialized: current node (z0gb723o6ikqwkg3txx0uh7o8) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3s7eqhe224ubuynwz9iyoy3a5y1wjjjm6886kv5maxmpxiwt8m-9aaultjycjqy8osg5cr8qxnfk 192.168.0.28:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+[node1] (local) root@192.168.0.28 ~
+$ docker nodes ls
+docker: 'nodes' is not a docker command.
+See 'docker --help'
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+fzruslypwch501s7uyzmpztrz     node2      Ready     Active                          24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d ovrlay overnet
+Error response from daemon: plugin "ovrlay" not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d overlay overnet
+kq2r76w6h3ilm1bn5ydq91006
+[node1] (local) root@192.168.0.28 ~
+docker network ls
+bash: dockerdocker: command not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+4fdac416dd63   bridge            bridge    local
+20bb680983cf   docker_gwbridge   bridge    local
+cb452cfeda0d   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+ed8e6303fad3   none              null      local
+kq2r76w6h3il   overnet           overlay   swarm
+[node1] (local) root@192.168.0.28 ~
+$ docker network inspect overnet
+[
+    {
+        "Name": "overnet",
+        "Id": "kq2r76w6h3ilm1bn5ydq91006",
+        "Created": "2024-04-04T04:43:04.696141061Z",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.0.1.0/24",
+                    "Gateway": "10.0.1.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": null,
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4097"
+        },
+        "Labels": null
+    }
+]
+[node1] (local) root@192.168.0.28 ~
+$ ###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #
+#                                                             #
+# The PWD team.                                               #
+###############################################################
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr ($hostname -i)
+bash: syntax error near unexpected token `('
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr $(hostname -i)
+Swarm initialized: current node (z0gb723o6ikqwkg3txx0uh7o8) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3s7eqhe224ubuynwz9iyoy3a5y1wjjjm6886kv5maxmpxiwt8m-9aaultjycjqy8osg5cr8qxnfk 192.168.0.28:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+[node1] (local) root@192.168.0.28 ~
+$ docker nodes ls
+docker: 'nodes' is not a docker command.
+See 'docker --help'
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+fzruslypwch501s7uyzmpztrz     node2      Ready     Active                          24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d ovrlay overnet
+Error response from daemon: plugin "ovrlay" not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d overlay overnet
+kq2r76w6h3ilm1bn5ydq91006
+[node1] (local) root@192.168.0.28 ~
+$ dockerdocker network ls
+bash: dockerdocker: command not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+4fdac416dd63   bridge            bridge    local
+20bb680983cf   docker_gwbridge   bridge    local
+cb452cfeda0d   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+ed8e6303fad3   none              null      local
+kq2r76w6h3il   overnet           overlay   swarm
+[node1] (local) root@192.168.0.28 ~
+$ docker network inspect overnet
+[
+    {
+        "Name": "overnet",
+        "Id": "kq2r76w6h3ilm1bn5ydq91006",
+        "Created": "2024-04-04T04:43:04.696141061Z",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.0.1.0/24",
+                    "Gateway": "10.0.1.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": null,
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4097"
+        },
+        "Labels": null
+    }
+]
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ docker service create --name myservice \
+> --network overnet###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #
+#                                                             #
+# The PWD team.                                               #
+###############################################################
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr ($hostname -i)
+bash: syntax error near unexpected token `('
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm init --advertise-addr $(hostname -i)
+Swarm initialized: current node (z0gb723o6ikqwkg3txx0uh7o8) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3s7eqhe224ubuynwz9iyoy3a5y1wjjjm6886kv5maxmpxiwt8m-9aaultjycjqy8osg5cr8qxnfk 192.168.0.28:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+[node1] (local) root@192.168.0.28 ~
+$ docker nodes ls
+docker: 'nodes' is not a docker command.
+See 'docker --help'
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+z0gb723o6ikqwkg3txx0uh7o8 *   node1      Ready     Active         Leader           24.0.7
+fzruslypwch501s7uyzmpztrz     node2      Ready     Active                          24.0.7
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d ovrlay overnet
+Error response from daemon: plugin "ovrlay" not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network create -d overlay overnet
+kq2r76w6h3ilm1bn5ydq91006
+[node1] (local) root@192.168.0.28 ~
+$ dockerdocker network ls
+bash: dockerdocker: command not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+4fdac416dd63   bridge            bridge    local
+20bb680983cf   docker_gwbridge   bridge    local
+cb452cfeda0d   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+ed8e6303fad3   none              null      local
+kq2r76w6h3il   overnet           overlay   swarm
+[node1] (local) root@192.168.0.28 ~
+$ docker network inspect overnet
+[
+    {
+        "Name": "overnet",
+        "Id": "kq2r76w6h3ilm1bn5ydq91006",
+        "Created": "2024-04-04T04:43:04.696141061Z",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.0.1.0/24",
+                    "Gateway": "10.0.1.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": null,
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4097"
+        },
+        "Labels": null
+    }
+]
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ 
+[node1] (local) root@192.168.0.28 ~
+$ docker service create --name myservice \
+--network overnet\
+> replicas 2 \
+> ubuntu sleep infinity
+Error response from daemon: network overnet--network not found
+[node1] (local) root@192.168.0.28 ~
+$ docker service create --name myservice --network overnet--network overnetreplicas 2 ubuntu sleep infinity
+Error response from daemon: network overnet--network not found
+[node1] (local) root@192.168.0.28 ~
+$ docker network lsNETWORK ID     NAME              DRIVER    SCOPE
+4fdac416dd63   bridge            bridge    local
+20bb680983cf   docker_gwbridge   bridge    local
+cb452cfeda0d   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+ed8e6303fad3   none              null      local
+kq2r76w6h3il   overnet           overlay   swarm
+[node1] (local) root@192.168.0.28 ~
+$ docker service create --name myservice --network overnet overnet replicas 2 ubuntu sleep infinity
+image overnet:latest could not be accessed on a registry to record
+its digest. Each node will access overnet:latest independently,
+possibly leading to different nodes running different
+versions of the image.
+
+pwpo3eh3j7of8aky414geka7g
+overall progress: 0 out of 1 tasks 
+1/1: No such image: overnet:latest 
+^COperation continuing in background.
+Use `docker service ps pwpo3eh3j7of8aky414geka7g` to check progress.
+[node1] (local) root@192.168.0.28 ~
+$ docker service create --name myservice --network overnet replicas 2 ubuntu sleep infinity
+Error response from daemon: rpc error: code = AlreadyExists desc = name conflicts with an existing object: service myservice already exists
+[node1] (local) root@192.168.0.28 ~
+$ docker service rm myservice
+myservice
+[node1] (local) root@192.168.0.28 ~
+$ docker service create --name myservice --network overnet replicas 2 ubuntu sleep infinity
+image replicas:latest could not be accessed on a registry to record
+its digest. Each node will access replicas:latest independently,
+possibly leading to different nodes running different
+versions of the image.
+
+8njhpmay6pvokjra5g63nawme
+overall progress: 0 out of 1 tasks 
+1/1: No such image: replicas:latest 
+^COperation continuing in background.
+Use `docker service ps 8njhpmay6pvokjra5g63nawme` to check progress.
+[node1] (local) root@192.168.0.28 ~
+$ docker service rm myservicemyservice
+[node1] (local) root@192.168.0.28 ~
+$ docker service create --name myservice --network overnet --replicas 2 ubuntu sleep infinity
+myou8kf3xzlyy18w2540uqgui
+overall progress: 2 out of 2 tasks 
+1/2: running   
+2/2: running   
+verify: Service converged 
+[node1] (local) root@192.168.0.28 ~
+$ docker service ls
+ID             NAME        MODE         REPLICAS   IMAGE           PORTS
+myou8kf3xzly   myservice   replicated   2/2        ubuntu:latest   
+[node1] (local) root@192.168.0.28 ~
+$ docker service ps myservice
+ID             NAME          IMAGE           NODE      DESIRED STATE   CURRENT STATE                ERROR     PORTS
+ofivpe3yc95r   myservice.1   ubuntu:latest   node2     Running         Running about a minute ago             
+lknmgfce3zbe   myservice.2   ubuntu:latest   node1     Running         Running about a minute ago             
+[node1] (local) root@192.168.0.28 ~
+$ docker network inspect overnet[
+    {
+        "Name": "overnet",
+        "Id": "kq2r76w6h3ilm1bn5ydq91006",
+        "Created": "2024-04-04T05:06:43.508163866Z",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.0.1.0/24",
+                    "Gateway": "10.0.1.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "abcb45c0c66256ec5bd376d2392de031b351fc56033889bd1ee5546ec49d01d6": {
+                "Name": "myservice.2.lknmgfce3zbecglo2hyezwn5u",
+                "EndpointID": "1d8d03e2d7b4fff66a09f51497b8c0a123eb992f14d38f873bbc25d195196793",
+                "MacAddress": "02:42:0a:00:01:a0",
+                "IPv4Address": "10.0.1.160/24",
+                "IPv6Address": ""
+            },
+            "lb-overnet": {
+                "Name": "overnet-endpoint",
+                "EndpointID": "73155d012c720889266d99a66b35c96c49ad1ff0c3e2917b77c6119c6e5fbb90",
+                "MacAddress": "02:42:0a:00:01:a1",
+                "IPv4Address": "10.0.1.161/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4097"
+        },
+        "Labels": {},
+        "Peers": [
+            {
+                "Name": "41491e301a0c",
+                "IP": "192.168.0.28"
+            },
+            {
+                "Name": "b59d1163d157",
+                "IP": "192.168.0.27"
+            }
+        ]
+    }
+]
+[node1] (local) root@192.168.0.28 ~
+$ docker exec -it kq2r76w6h3ilm1bn5ydq91006 /bin/bash
+Error response from daemon: No such container: kq2r76w6h3ilm1bn5ydq91006
+[node1] (local) root@192.168.0.28 ~
+$ docker ps
+CONTAINER ID   IMAGE           COMMAND            CREATED          STATUS          PORTS     NAMES
+abcb45c0c662   ubuntu:latest   "sleep infinity"   11 minutes ago   Up 11 minutes             myservice.2.lknmgfce3zbecglo2hyezwn5u
+[node1] (local) root@192.168.0.28 ~
+$ docker exec -it abcb45c0c662 /bin/bash
+root@abcb45c0c662:/# apt-get update && apt-get install -y iputils-ping
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2067 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [44.6 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1641 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1081 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1358 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2104 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [61.2 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1920 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [80.9 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [33.3 kB]
+Fetched 30.7 MB in 2s (12.6 MB/s)                             
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcap2-bin libpam-cap
+The following NEW packages will be installed:
+  iputils-ping libcap2-bin libpam-cap
+0 upgraded, 3 newly installed, 0 to remove and 12 not upgraded.
+Need to get 76.8 kB of archives.
+After this operation, 280 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcap2-bin amd64 1:2.44-1ubuntu0.22.04.1 [26.0 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 iputils-ping amd64 3:20211215-1 [42.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpam-cap amd64 1:2.44-1ubuntu0.22.04.1 [7928 B]
+Fetched 76.8 kB in 0s (786 kB/s)    
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcap2-bin.
+(Reading database ... 4393 files and directories currently installed.)
+Preparing to unpack .../libcap2-bin_1%3a2.44-1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libcap2-bin (1:2.44-1ubuntu0.22.04.1) ...
+Selecting previously unselected package iputils-ping.
+Preparing to unpack .../iputils-ping_3%3a20211215-1_amd64.deb ...
+Unpacking iputils-ping (3:20211215-1) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../libpam-cap_1%3a2.44-1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.44-1ubuntu0.22.04.1) ...
+Setting up libcap2-bin (1:2.44-1ubuntu0.22.04.1) ...
+Setting up libpam-cap:amd64 (1:2.44-1ubuntu0.22.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up iputils-ping (3:20211215-1) ...
+root@abcb45c0c662:/# ping 192.168.0.28PING 192.168.0.28 (192.168.0.28) 56(84) bytes of data.
+64 bytes from 192.168.0.28: icmp_seq=1 ttl=64 time=0.079 ms
+64 bytes from 192.168.0.28: icmp_seq=2 ttl=64 time=0.061 ms
+64 bytes from 192.168.0.28: icmp_seq=3 ttl=64 time=0.062 ms
+64 bytes from 192.168.0.28: icmp_seq=4 ttl=64 time=0.076 ms
+64 bytes from 192.168.0.28: icmp_seq=5 ttl=64 time=0.058 ms
+64 bytes from 192.168.0.28: icmp_seq=6 ttl=64 time=0.074 ms
+64 bytes from 192.168.0.28: icmp_seq=7 ttl=64 time=0.080 ms
+64 bytes from 192.168.0.28: icmp_seq=8 ttl=64 time=0.078 ms
+^C
+--- 192.168.0.28 ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 6999ms
+rtt min/avg/max/mdev = 0.058/0.071/0.080/0.008 ms
+root@abcb45c0c662:/# cat /etc/resolv.conf
+search 51ur3jppi0eupdptvsj42kdvgc.bx.internal.cloudapp.net
+nameserver 127.0.0.11
+options ndots:0
+root@abcb45c0c662:/# ping -c5 myservice
+PING myservice (10.0.1.158) 56(84) bytes of data.
+64 bytes from 10.0.1.158 (10.0.1.158): icmp_seq=1 ttl=64 time=0.214 ms
+64 bytes from 10.0.1.158 (10.0.1.158): icmp_seq=2 ttl=64 time=0.069 ms
+64 bytes from 10.0.1.158 (10.0.1.158): icmp_seq=3 ttl=64 time=0.119 ms
+64 bytes from 10.0.1.158 (10.0.1.158): icmp_seq=4 ttl=64 time=0.083 ms
+64 bytes from 10.0.1.158 (10.0.1.158): icmp_seq=5 ttl=64 time=0.087 ms
+
+--- myservice ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
+rtt min/avg/max/mdev = 0.069/0.114/0.214/0.052 ms
+root@abcb45c0c662:/# exit
+exit
+[node1] (local) root@192.168.0.28 ~
+$ docker service inspect myservice
+[
+    {
+        "ID": "myou8kf3xzlyy18w2540uqgui",
+        "Version": {
+            "Index": 739
+        },
+        "CreatedAt": "2024-04-04T05:06:43.346146345Z",
+        "UpdatedAt": "2024-04-04T05:06:43.349337765Z",
+        "Spec": {
+            "Name": "myservice",
+            "Labels": {},
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "ubuntu:latest@sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e",
+                    "Args": [
+                        "sleep",
+                        "infinity"
+                    ],
+                    "Init": false,
+                    "StopGracePeriod": 10000000000,
+                    "DNSConfig": {},
+                    "Isolation": "default"
+                },
+                "Resources": {
+                    "Limits": {},
+                    "Reservations": {}
+                },
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 5000000000,
+                    "MaxAttempts": 0
+                },
+                "Placement": {
+                    "Platforms": [
+                        {
+                            "Architecture": "amd64",
+                            "OS": "linux"
+                        },
+                        {
+                            "OS": "linux"
+                        },
+                        {
+                            "Architecture": "arm64",
+                            "OS": "linux"
+                        },
+                        {
+                            "Architecture": "ppc64le",
+                            "OS": "linux"
+                        },
+                        {
+                            "Architecture": "s390x",
+                            "OS": "linux"
+                        }
+                    ]
+                },
+                "Networks": [
+                    {
+                        "Target": "kq2r76w6h3ilm1bn5ydq91006"
+                    }
+                ],
+                "ForceUpdate": 0,
+                "Runtime": "container"
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 2
+                }
+            },
+            "UpdateConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "RollbackConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "EndpointSpec": {
+                "Mode": "vip"
+            }
+        },
+        "Endpoint": {
+            "Spec": {
+                "Mode": "vip"
+            },
+            "VirtualIPs": [
+                {
+                    "NetworkID": "kq2r76w6h3ilm1bn5ydq91006",
+                    "Addr": "10.0.1.158/24"
+                }
+            ]
+        }
+    }
+]
+[node1] (local) root@192.168.0.28 ~
+$ docker service rm myservice
+myservice
+[node1] (local) root@192.168.0.28 ~
+$ docker ps
+CONTAINER ID   IMAGE           COMMAND            CREATED          STATUS          PORTS     NAMES
+abcb45c0c662   ubuntu:latest   "sleep infinity"   28 minutes ago   Up 28 minutes             myservice.2.lknmgfce3zbecglo2hyezwn5u
+[node1] (local) root@192.168.0.28 ~
+$ docker kill abcb45c0c662
+Error response from daemon: Cannot kill container: abcb45c0c662: No such container: abcb45c0c662
+[node1] (local) root@192.168.0.28 ~
+$ docker kill abcb45c0c662
+Error response from daemon: Cannot kill container: abcb45c0c662: No such container: abcb45c0c662
+[node1] (local) root@192.168.0.28 ~
+$ docker service rm myservice
+Error response from daemon: service myservice not found
+[node1] (local) root@192.168.0.28 ~
+$ docker kill abcb45c0c662
+Error response from daemon: Cannot kill container: abcb45c0c662: No such container: abcb45c0c662
+[node1] (local) root@192.168.0.28 ~
+$ docker kill abcb45c0c662 --force
+unknown flag: --force
+See 'docker kill --help'.
+[node1] (local) root@192.168.0.28 ~
+$ docker stop abcb45c0c662
+Error response from daemon: No such container: abcb45c0c662
+[node1] (local) root@192.168.0.28 ~
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[node1] (local) root@192.168.0.28 ~
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[node1] (local) root@192.168.0.28 ~
+$ docker swarm leave --force
+Node left the swarm.
+[node1] (local) root@192.168.0.28 ~
+$ 

@@ -1,0 +1,8 @@
+myproject/
+├── docker-compose.yaml
+├── db/
+│   ├── Dockerfile
+│   └── init.js
+└── web/
+    ├── Dockerfile
+    └── index.js

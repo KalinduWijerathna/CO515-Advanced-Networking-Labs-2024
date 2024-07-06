@@ -1,0 +1,154 @@
+###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #
+#                                                             #
+# The PWD team.                                               #
+###############################################################
+[node2] (local) root@192.168.0.27 ~
+$ docker swarm join --token SWMTKN-1-3s7eqhe224ubuynwz9iyoy3a5y1wjjjm6886kv5maxmpxiwt8m-9aaultjycjqy8osg5cr8qxnfk 192.168.0.28:2377
+This node joined a swarm as a worker.                                    [node2] (local) root@192.168.0.27 ~     $ ###############################################################                                      #                          WARNING!!!!                        #          # This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #                                   1
+wjjjm      x                                                   # 5ywjjjm                          3a
+This node joined a swarm as a worker.                        #   yi3a15ywjjj                         o
+[node2] (local) root@192.168.0.27 ~###########################    iyyoi3a15ywjjj
+ynwz9yyoi3a15ywjjjmot@192.168.0.27 ~             bynwz9yyoi3a15ywjjjm
+[node2] (local) root@192.168.0.27 ~sg5cr8qxnfk 192.168.0.28:2377wjj 
+$ docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+e9cb71c4aee8   bridge            bridge    local
+b7a34fe78ee9   docker_gwbridge   bridge    local
+3ac1b6ed1f3c   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+0eb1206122bb   none              null      local
+[node2] (local) root@192.168.0.27 ~
+$ ###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #                                   1
+wjjjm      x                                                   # 5ywjjjm                          3a
+This node joined a swarm as a worker.                        #   yi3a15ywjjj                         o
+[node2] (local) root@192.168.0.27 ~###########################    iyyoi3a15ywjjj
+$ 
+[node2] (local) root@192.168.0.27 ~sg5cr8qxnfk 192.168.0.28:2377wjj 
+$ docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+e9cb71c4aee8   bridge            bridge    local
+b7a34fe78ee9   docker_gwbridge   bridge    local
+3ac1b6ed1f3c   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+0eb1206122bb   none              null      local
+[node2] (local) root@192.168.0.27 ~
+$ ###############################################################
+#                          WARNING!!!!                        #
+# This is a sandbox environment. Using personal credentials   #
+# is HIGHLY! discouraged. Any consequences of doing so are    #
+# completely the user's responsibilites.                      #
+#                                                             #
+# The PWD team.                                               #
+###############################################################
+[node2] (local) root@192.168.0.27 ~
+$ docker swarm join --token SWMTKN-1-3s7eqhe224ubuynwz9iyoy3a5y1wjjjm6886kv5maxmpxiwt8m-9aaultjycjqy8osg5cr8qxnfk 192.168.0.28:2377
+This node joined a swarm as a worker.
+[node2] (local) root@192.168.0.27 ~
+$ 
+[node2] (local) root@192.168.0.27 ~
+$ docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+e9cb71c4aee8   bridge            bridge    local
+b7a34fe78ee9   docker_gwbridge   bridge    local
+3ac1b6ed1f3c   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+0eb1206122bb   none              null      local
+[node2] (local) root@192.168.0.27 ~
+docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+e9cb71c4aee8   bridge            bridge    local
+b7a34fe78ee9   docker_gwbridge   bridge    local
+3ac1b6ed1f3c   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+0eb1206122bb   none              null      local
+kq2r76w6h3il   overnet           overlay   swarm
+[node2] (local) root@192.168.0.27 ~
+$ docker network inspect overent
+[]
+Error response from daemon: network overent not found
+[node2] (local) root@192.168.0.27 ~
+$ docker network inspect overnet
+[
+    {
+        "Name": "overnet",
+        "Id": "kq2r76w6h3ilm1bn5ydq91006",
+        "Created": "2024-04-04T05:06:43.507777464Z",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.0.1.0/24",
+                    "Gateway": "10.0.1.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "c8d3fc97d37f1fc985f1993da47ac92e53f0f66acfbcfb0c76693fb9c91cba1a": {
+                "Name": "myservice.1.ofivpe3yc95ry5twp8bbe4nbt",
+                "EndpointID": "dc8768e5488b377c2ec45a353870e5a0519d41b3a2d1fbf5f83498822047bcb7",
+                "MacAddress": "02:42:0a:00:01:9f",
+                "IPv4Address": "10.0.1.159/24",
+                "IPv6Address": ""
+            },
+            "lb-overnet": {
+                "Name": "overnet-endpoint",
+                "EndpointID": "c0aad0d911732ef56f768adaca6a0d47b380d3933da82dfeee399c36cd94cd5b",
+                "MacAddress": "02:42:0a:00:01:a2",
+                "IPv4Address": "10.0.1.162/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4097"
+        },
+        "Labels": {},
+        "Peers": [
+            {
+                "Name": "b59d1163d157",
+                "IP": "192.168.0.27"
+            },
+            {
+                "Name": "41491e301a0c",
+                "IP": "192.168.0.28"
+            }
+        ]
+    }
+]
+[node2] (local) root@192.168.0.27 ~
+$ docker network inspect overnet
+[]
+Error response from daemon: network overnet not found
+[node2] (local) root@192.168.0.27 ~
+$ docker network ls
+NETWORK ID     NAME              DRIVER    SCOPE
+e9cb71c4aee8   bridge            bridge    local
+b7a34fe78ee9   docker_gwbridge   bridge    local
+3ac1b6ed1f3c   host              host      local
+twvjubhr2uov   ingress           overlay   swarm
+0eb1206122bb   none              null      local
+[node2] (local) root@192.168.0.27 ~
+$ docker swarm leave --force
+Node left the swarm.
+[node2] (local) root@192.168.0.27 ~
+$ 
